@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RicharDevs Studios</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0d0d0d;
+    color:white;
+    font-family:'Poppins',sans-serif;
+}
+
+/* HEADER */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 50px;
+    background:rgba(0,0,0,0.9);
+    border-bottom:2px solid #FFD700;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo img{
+    width:60px;
+}
+
+.logo h1{
+    font-family:'Orbitron',sans-serif;
+    color:#FFD700;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#FFD700;
+}
+
+/* HERO */
+
+.hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    overflow:hidden;
+}
+
+/* LOGO GIGANTE DE FONDO */
+
+.logo-fondo{
+    position:absolute;
+    width:100%;
+    height:100%;
+
+    background-image:url("logotipo.png");
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:70%;
+
+    opacity:0.07;
+
+    filter:
+        drop-shadow(0 0 30px gold)
+        drop-shadow(0 0 60px gold);
+
+    animation:flotar 6s ease-in-out infinite;
+}
+
+/* CAPA OSCURA */
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.35);
+}
+
+/* CONTENIDO PRINCIPAL */
+
+.contenido{
+    position:relative;
+    z-index:2;
+    max-width:800px;
+    padding:20px;
+}
+
+.contenido h2{
+    font-size:4rem;
+    font-family:'Orbitron',sans-serif;
+    color:#FFD700;
+    margin-bottom:20px;
+}
+
+.contenido p{
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
+
+.boton{
+    display:inline-block;
+    background:#FFD700;
+    color:black;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:10px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.boton:hover{
+    background:white;
+}
+
+/* SECCIONES */
+
+section{
+    padding:80px 10%;
+}
+
+.titulo{
+    text-align:center;
+    color:#FFD700;
+    font-family:'Orbitron',sans-serif;
+    margin-bottom:40px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#161616;
+    border:1px solid #FFD700;
+    border-radius:10px;
+    padding:25px;
+}
+
+.card h3{
+    color:#FFD700;
+    margin-bottom:10px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    border-top:2px solid #FFD700;
+    background:#111;
+}
+
+/* ANIMACIÓN */
+
+@keyframes flotar {
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-20px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <img src="logotipo.png" alt="RicharDevs">
+        <h1>RicharDevs Studios</h1>
+    </div>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre">Sobre Nosotros</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+</header>
+
+<section class="hero" id="inicio">
+
+    <div class="logo-fondo"></div>
+
+    <div class="contenido">
+
+        <h2>Creando Mundos Digitales</h2>
+
+        <p>
+            Videojuegos independientes, experiencias únicas
+            y aventuras desarrolladas con pasión.
+        </p>
+
+        <a href="#proyectos" class="boton">
+            Ver Proyectos
+        </a>
+
+    </div>
+
+</section>
+
+<section id="sobre">
+
+    <h2 class="titulo">Sobre RicharDevs</h2>
+
+    <p style="text-align:center;">
+        RicharDevs es un mini estudio de desarrollo de videojuegos
+        enfocado en crear experiencias innovadoras para PC y dispositivos móviles.
+    </p>
+
+</section>
+
+<section id="proyectos">
+
+    <h2 class="titulo">Proyectos</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Proyecto 1</h3>
+            <p>Descripción del videojuego.</p>
+        </div>
+
+        <div class="card">
+            <h3>Proyecto 2</h3>
+            <p>Descripción del videojuego.</p>
+        </div>
+
+        <div class="card">
+            <h3>Próximo Lanzamiento</h3>
+            <p>Nuevas aventuras están en camino.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="contacto">
+
+    <h2 class="titulo">Contacto</h2>
+
+    <div style="text-align:center;">
+        <p>📧 contacto@richardevs.com</p>
+        <p>🎮 Discord: RicharDevs</p>
+        <p>💻 GitHub: RicharDevs</p>
+        <p>📍 Sahagún, Córdoba - Colombia</p>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 RicharDevs Studios - Todos los derechos reservados.
+</footer>
+
+</body>
+</html>
